@@ -1,0 +1,5 @@
+websockets==9.1  # Biblioteca para manipulação de WebSockets
+requests==2.26.0  # Biblioteca para fazer requisições HTTP
+click==8.0.1  # Biblioteca para criar interfaces de linha de comando
+sqlalchemy==1.4.23  # ORM para banco de dados
+psycopg2-binary==2.9.1  # Driver para PostgreSQL

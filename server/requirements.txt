@@ -1,0 +1,3 @@
+fastapi==0.68.0  # FastAPI framework
+uvicorn==0.15.0  # ASGI server to serve FastAPI
+websockets==9.1  # Biblioteca para manipulação de WebSockets

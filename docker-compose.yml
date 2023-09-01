@@ -1,0 +1,24 @@
+version: '3'
+services:
+
+  # API Service
+  fastapi-app:
+    build:
+      context: ./app # Caminho para o diretório contendo o Dockerfile e o código do FastAPI
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # Porta padrão para FastAPI/Uvicorn
+    depends_on:
+      - db # Este serviço depende do serviço de banco de dados
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:5432/postgresdb
+
+  # Postgres Service
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgresdb
